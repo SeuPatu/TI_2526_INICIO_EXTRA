@@ -1,54 +1,62 @@
-# Tecnologias Informáticas - exercício extra
+# ProjetoJava
 
-Faz *fork* deste repositório.  Cria um programa tal como descrito na secção seguinte. No fim, substitui o conteúdo do README por uma descrição do funcionamento do teu programa.
+Aplicação de console em Java para gerenciar um catálogo simples de livros.
 
-## Gestão Simples de Livros
+Descrição
 
-### Descrição
+Este projeto contém um programa Java (`ProjetoJava.java`) que permite ao usuário:
 
-Escreve um programa em C++ que permita gerir um pequeno catálogo de livros.
+- Adicionar livros (título e ano) até um máximo de 5 livros.
+- Listar os livros adicionados.
+- Procurar um livro pelo título (busca case-insensitive).
 
-1. Cria uma estrutura **Livro** com:
+A interface é baseada em "abas"/telas de terminal: um menu principal e telas separadas para "Adicionar", "Listar" e "Procurar". As telas limpam a saída ao entrar/voltar e mantêm os dados em memória.
 
-   * titulo (string)
+Como compilar e executar
 
-   * ano (int)
+No Windows (PowerShell):
 
-2. O programa deve permitir:
+1. Compile:
 
-   * Adicionar até 5 livros (usar array fixo).
+```powershell
+javac "c:\Users\BOLSONARO ANAO\Desktop\java\trabalho ti\ProjetoJava.java"
+```
 
-   * Listar todos os livros inseridos.
+2. Execute (a partir da mesma pasta onde está o .class):
 
-   * Procurar livro pelo título (mostrar ano se encontrado, ou “não encontrado”).
+```powershell
+Set-Location -Path "c:\Users\BOLSONARO ANAO\Desktop\java\trabalho ti"
+java ProjetoJava
+```
 
-   * Sair.
+Ou, a partir de qualquer pasta especificando o classpath:
 
-3. O programa deve:
+```powershell
+java -cp "c:\Users\BOLSONARO ANAO\Desktop\java\trabalho ti" ProjetoJava
+```
 
-   * Ter um menu em ciclo até o utilizador escolher sair.
+Uso esperado
 
-   * Usar funções para cada operação (ex.: adicionarLivro, listarLivros, procurarLivro).
+- O menu principal é mostrado, com as opções:
+  1. Adicionar Livro
+  2. Listar Livros
+  3. Procurar Livro
+  4. Sair
 
-   * Usar decisões (**if** ou **switch**) para as opções do menu.
+- Ao escolher uma opção, é aberta uma tela dedicada para aquela ação. Ao terminar, pressione Enter para voltar ao menu.
 
-### Exemplo de funcionamento
+Limitações e melhorias sugeridas
 
-    === MENU ===
-    1. Adicionar Livro
-    2. Listar Livros
-    3. Procurar Livro
-    4. Sair
-    Escolha: 1
-    Título: O Principezinho
-    Ano: 1943
+- O catálogo é mantido apenas em memória (não há persistência entre execuções).
+- Sugestões de melhorias:
+  - Persistência em arquivo (CSV/JSON).
+  - Remover/editar entradas.
+  - Aumentar limite de livros ou permitir tamanho dinâmico.
 
-    Escolha: 2
-    1 - O Principezinho (1943)
+Licença
 
-    Escolha: 3
-    Introduza o título a procurar: O Principezinho
-    Encontrado: O Principezinho (1943)
+Este projeto é um exercício educacional. Sinta-se à vontade para copiar, modificar e usar.
 
-    Escolha: 4
-    A sair...
+---
+
+(README gerado automaticamente. Se quiser, eu posso: 1) inicializar um repositório Git nesta pasta e criar um commit com este README; 2) adicionar um remote e enviar (push) para um repositório GitHub — precisarei da URL do repositório remoto ou você pode configurar o remote localmente.)
